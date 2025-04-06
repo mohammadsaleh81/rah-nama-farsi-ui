@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for Persian theme
+				'persian-blue': {
+					light: '#E6F0F7',
+					DEFAULT: '#1E88E5',
+					dark: '#155FA0'
+				},
+				'persian-gold': {
+					light: '#FFF8E1',
+					DEFAULT: '#FFC107',
+					dark: '#FF8F00'
+				},
+				'persian-teal': {
+					light: '#E0F2F1',
+					DEFAULT: '#009688',
+					dark: '#00695C'
 				}
 			},
 			borderRadius: {
@@ -84,11 +101,24 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'slide-in': {
+					'0%': { transform: 'translateX(20px)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'slide-in': 'slide-in 0.3s ease-out'
+			},
+			fontFamily: {
+				'vazir': ['Vazir', 'Tahoma', 'sans-serif']
 			}
 		}
 	},
