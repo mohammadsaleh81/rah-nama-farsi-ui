@@ -14,37 +14,38 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container-custom flex justify-between items-center py-4">
-        <Link to="/" className="text-2xl font-bold text-persian-blue-dark">
-          <span className="ml-1">راه‌نما</span>
-        </Link>
+        <div className="flex items-center space-x-8 space-x-reverse">
+          <Link to="/login">
+            <Button variant="outline" className="font-medium">
+              ورود
+            </Button>
+          </Link>
+          <Link to="/register">
+            <Button className="bg-orange-500 hover:bg-orange-600 font-medium">
+              ثبت‌نام
+            </Button>
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8 space-x-reverse">
-          <Link to="/" className="text-gray-700 hover:text-persian-blue font-medium">
+          <Link to="/" className="text-gray-700 hover:text-orange-500 font-medium">
             صفحه اصلی
           </Link>
-          <Link to="/courses" className="text-gray-700 hover:text-persian-blue font-medium">
+          <Link to="/courses" className="text-gray-700 hover:text-orange-500 font-medium">
             دوره‌ها
           </Link>
-          <Link to="/about" className="text-gray-700 hover:text-persian-blue font-medium">
+          <Link to="/about" className="text-gray-700 hover:text-orange-500 font-medium">
             درباره ما
           </Link>
-          <Link to="/contact" className="text-gray-700 hover:text-persian-blue font-medium">
+          <Link to="/contact" className="text-gray-700 hover:text-orange-500 font-medium">
             تماس با ما
           </Link>
-          <div className="flex items-center space-x-4 space-x-reverse">
-            <Link to="/login">
-              <Button variant="outline" className="font-medium">
-                ورود
-              </Button>
-            </Link>
-            <Link to="/register">
-              <Button className="bg-persian-blue hover:bg-persian-blue-dark font-medium">
-                ثبت‌نام
-              </Button>
-            </Link>
-          </div>
         </nav>
+
+        <Link to="/" className="text-2xl font-bold text-orange-700">
+          <span className="ml-1">راه‌نما</span>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -62,28 +63,28 @@ const Header = () => {
           <div className="flex flex-col space-y-4">
             <Link
               to="/"
-              className="text-gray-700 hover:text-persian-blue font-medium py-2"
+              className="text-gray-700 hover:text-orange-500 font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               صفحه اصلی
             </Link>
             <Link
               to="/courses"
-              className="text-gray-700 hover:text-persian-blue font-medium py-2"
+              className="text-gray-700 hover:text-orange-500 font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               دوره‌ها
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-persian-blue font-medium py-2"
+              className="text-gray-700 hover:text-orange-500 font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               درباره ما
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-persian-blue font-medium py-2"
+              className="text-gray-700 hover:text-orange-500 font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               تماس با ما
@@ -95,7 +96,7 @@ const Header = () => {
                 </Button>
               </Link>
               <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-persian-blue hover:bg-persian-blue-dark font-medium">
+                <Button className="w-full bg-orange-500 hover:bg-orange-600 font-medium">
                   ثبت‌نام
                 </Button>
               </Link>

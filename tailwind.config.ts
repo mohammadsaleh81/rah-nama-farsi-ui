@@ -78,6 +78,12 @@ export default {
 					light: '#E0F2F1',
 					DEFAULT: '#009688',
 					dark: '#00695C'
+				},
+				// Adding new orange theme colors
+				'persian-orange': {
+					light: '#FFF0E6',
+					DEFAULT: '#F97316',
+					dark: '#C2580B'
 				}
 			},
 			borderRadius: {
